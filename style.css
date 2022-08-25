@@ -1,0 +1,147 @@
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --neutral-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+.card {
+  z-index: 100;
+  background-color: #fff;
+  height: 100%;
+  width: 450px;
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px 0 rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.detail > .title {
+  font-weight: 900;
+  margin: 0.5em 0;
+}
+
+.detail > .des {
+  color: var(--neutral-desaturated-blue);
+  padding: 0 2.8em;
+}
+
+.box-plan {
+  background-color: var(--neutral-pale-blue);
+  margin: 1rem 2rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.box-plan > .icon {
+  margin-left: 1.5rem;
+  margin-right: 1em;
+}
+
+.box-plan-detail > .name {
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+}
+.box-plan-detail > .total {
+  color: var(--neutral-desaturated-blue);
+}
+
+.box-plan > .option {
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--primary-bright-blue);
+}
+
+.btn {
+  width: 86%;
+  background: var(--primary-bright-blue);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px 0 var(--neutral-desaturated-blue);
+  padding: 0.5em 1em;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn:active,
+.btn:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.cancel {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-desaturated-blue);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 300px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .des {
+    font-size: 0.8rem;
+  }
+  .icon > img {
+    height: 40px;
+  }
+  .box-plan-detail {
+    text-align-last: left;
+  }
+  .name {
+    font-size: 0.8rem;
+  }
+  .total {
+    font-size: 0.6rem;
+  }
+  .option {
+    font-size: 0.8rem;
+  }
+  .add,
+  .cancel {
+    font-size: 0.8rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
